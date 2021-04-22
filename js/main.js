@@ -62,3 +62,17 @@ ada.printInfo(); // => ada is 22 years old
     If the length of the string is less than 10 console log "Small Number"
 */
 
+const isgreaterthan = (string) => {
+    return new Promise( (resolve,reject) => {
+        if(length(string) > 10 ){
+            resolve("Big word")
+        } else {
+            reject("Small Number")
+        }
+    })
+}
+
+isgreaterthan("This is going to be more than ten words i hope")
+//Happy resolver path
+.then( (result) => {
+    console.log('This is a ${result}')
